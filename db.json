@@ -1,0 +1,30 @@
+{
+  "cities": [
+    { "id": 1, "name": "Paris 01", "zipCode": "75001" },
+    { "id": 2, "name": "Paris 02", "zipCode": "75002" },
+    { "id": 3, "name": "Paris 03", "zipCode": "75003" },
+    { "id": 4, "name": "Paris 04", "zipCode": "75004" },
+    { "id": 5, "name": "Paris 05", "zipCode": "75005" },
+    { "id": 6, "name": "Paris 06", "zipCode": "75006" },
+    { "id": 7, "name": "Paris 07", "zipCode": "75007" },
+    { "id": 8, "name": "Paris 08", "zipCode": "75008" },
+    { "id": 9, "name": "Paris 09", "zipCode": "75009" },
+    { "id": 10, "name": "Paris 10", "zipCode": "75010" },
+    { "id": 11, "name": "Paris 11", "zipCode": "75011" },
+    { "id": 12, "name": "Paris 12", "zipCode": "75012" },
+    { "id": 13, "name": "Paris 13", "zipCode": "75013" },
+    { "id": 14, "name": "Paris 14", "zipCode": "75014" },
+    { "id": 15, "name": "Paris 15", "zipCode": "75015" },
+    { "id": 16, "name": "Paris 16", "zipCode": "75016" },
+    { "id": 17, "name": "Paris 17", "zipCode": "75017" },
+    { "id": 18, "name": "Paris 18", "zipCode": "75018" },
+    { "id": 19, "name": "Paris 19", "zipCode": "75019" },
+    { "id": 20, "name": "Paris 20", "zipCode": "75020" }
+  ],
+  "housing": [
+    { "id": 1, "title": "Appartement 32m2 en plein Paris", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "userId": 1, "cityId": 1, "price": 999.99, "surface": 32, "rooms": 3, "pictures": [] }
+  ],
+  "users": [
+    { "id": 1, "name": "Admin", "password": "azerty" }
+  ]
+}
