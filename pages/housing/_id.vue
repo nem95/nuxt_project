@@ -1,6 +1,6 @@
 <template>
   <div v-if="currentArticle">
-    <nuxt-link :to="{ name: 'blog'}">
+    <nuxt-link :to="{ name: 'housing'}">
       <button type="button" class="btn btn-primary">Retour</button>
     </nuxt-link>
     Article numéro {{ $route.params.id }}

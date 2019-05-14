@@ -3,7 +3,7 @@ import pkg from './package'
 export default {
   mode: 'universal',
   env: {
-    baseUrl: "https://my-json-server.typicode.com/alexandre-tobia/api-sample"
+    baseUrl: "http://localhost:3001/"
   },
   /*
   ** Headers of the page
@@ -22,9 +22,9 @@ export default {
   },
   generate: {
     routes: [
-      '/blog/1',
-      '/blog/2',
-      '/blog/3',
+      '/housing/1',
+      '/housing/2',
+      '/housing/3',
     ],
   },
 
