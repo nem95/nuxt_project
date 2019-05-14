@@ -1,11 +1,48 @@
 <template>
-  <div v-if="currentArticle">
-    <nuxt-link :to="{ name: 'blog'}">
-      <button type="button" class="btn btn-primary">Retour</button>
-    </nuxt-link>
-    Article numéro {{ $route.params.id }}
-    <br>
-    Article title : {{ currentArticle.title }}
+  <div v-if="currentHousing">
+    <div class="row">
+      <div class="col-md-12 my-4">
+         <nuxt-link :to="{ name: 'blog'}">
+          <button type="button" class="btn btn-primary">Retour</button>
+        </nuxt-link>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{ currentHousing.title }} - {{ currentHousing.cities.name }}</h1>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-8">
+          <span class="badge badge-primary">{{ currentHousing.surface }}m2</span>
+          <span class="badge badge-primary">{{ currentHousing.rooms }}&nbsp;rooms</span>
+        </div>
+
+        <div class="col-md-4">
+          <p class="float-right"><b>{{ currentHousing.price }}€/mois</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" v-if="currentHousing.pictures.length > 0">
+      <div :class="`${index === 0 ? 'col-md-12' : 'col-md-3'} my-3`" v-for="(picture, index) in currentHousing.pictures" :key="index">
+        <img class="d-block w-100" :src="`${picture}`" alt="First slide" >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron p-3">
+          <h3 class="">Description</h3>
+          <hr class="my-4">
+          <p>{{ currentHousing.description}}</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Louer</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -14,35 +51,24 @@
 
   export default {
     async asyncData({ params }) {
-      console.log(params);
-
-      const { data } = await axios.get(`/servers/${params.id}`);
+      const { data } = await axios.get(`/housing/${params.id}?_expand=cities`);
       console.log(data);
+
+      return {
+        currentHousing: data,
+        activeSlide: 0,
+      }
     },
     data() {
       return {
-        currentArticle: null,
-        articles: [
-          {
-            id: 1,
-            title: "Article 1",
-            description: "Article numéro 1",
-          },
-          {
-            id: 2,
-            title: "Article 2",
-            description: "Article numéro 2",
-          },
-          {
-            id: 3,
-            title: "Article 3",
-            description: "Article numéro 3",
-          },
-        ]
+        currentHousing: null,
       }
     },
     mounted() {
-      this.currentArticle = this.articles.find(article => article.id === parseInt(this.$route.params.id));
+       console.log(this.currentHousing);
+       console.log(this.currentHousing.cityId);
+       console.log(this.currentHousing.users);
+       console.log(this.currentHousing.cities);
     },
     head() {
       return {

@@ -22,7 +22,20 @@
     { "id": 20, "name": "Paris 20", "zipCode": "75020" }
   ],
   "housing": [
-    { "id": 1, "title": "Appartement 32m2 en plein Paris", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "userId": 1, "cityId": 1, "price": 999.99, "surface": 32, "rooms": 3, "pictures": [] }
+    { "id": 1,
+      "title": "Appartement 32m2 en plein Paris",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "usersId": 1,
+      "citiesId": 1,
+      "price": 999.99,
+      "surface": 32,
+      "rooms": 3,
+      "pictures": [
+        "https://v.seloger.com/s/width/800/visuels/0/2/k/r/02krc7njmg1fkyihlq3wylezxxzzdvo6vxbhzo4jk.jpg",
+        "https://v.seloger.com/s/width/800/visuels/2/7/j/t/27jtz13ofq7wveytvcsidmw1ckl9wmfurgb8c6jgg.jpg",
+        "https://v.seloger.com/s/width/800/visuels/1/6/w/q/16wqoxk79xxf8y473gyf0zc0k6la3vxg5lpdfvitc.jpg"
+      ]
+    }
   ],
   "users": [
     { "id": 1, "name": "Admin", "password": "azerty" }

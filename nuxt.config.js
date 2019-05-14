@@ -22,9 +22,6 @@ export default {
   },
   generate: {
     routes: [
-      '/blog/1',
-      '/blog/2',
-      '/blog/3',
     ],
   },
 
