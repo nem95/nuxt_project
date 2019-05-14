@@ -3,7 +3,7 @@ import pkg from './package'
 export default {
   mode: 'universal',
   env: {
-    baseUrl: "http://localhost:3001"
+    baseUrl: "http://localhost:3001/"
   },
   /*
   ** Headers of the page

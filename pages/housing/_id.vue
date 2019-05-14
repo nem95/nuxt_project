@@ -2,7 +2,7 @@
   <div v-if="currentHousing">
     <div class="row">
       <div class="col-md-12 my-4">
-         <nuxt-link :to="{ name: 'blog'}">
+         <nuxt-link :to="{ name: 'housing'}">
           <button type="button" class="btn btn-primary">Retour</button>
         </nuxt-link>
       </div>
