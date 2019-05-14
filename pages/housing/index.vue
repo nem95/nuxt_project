@@ -16,7 +16,7 @@
             <p class="card-text mb-auto">
               {{ housing.description.substring(0, 100) }}
             </p>
-            <nuxt-link :to="{ name: 'housing-id', params: { id: housings.id } }">
+            <nuxt-link :to="{ name: 'housing-id', params: { id: housing.id } }">
               Plus d'infos
             </nuxt-link>
           </div>
