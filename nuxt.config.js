@@ -40,18 +40,21 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {src: '~/plugins/calendar', ssr: false}
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+  
   ],
 
   /*
   ** Build configuration
   */
   build: {
+    transpile: ['calendar'],
     /*
     ** You can extend webpack config here
     */
