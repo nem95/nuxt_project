@@ -52,7 +52,6 @@
   export default {
     async asyncData({ params }) {
       const { data } = await axios.get(`/housings/${params.id}?_expand=cities`);
-      console.log(data);
 
       return {
         currentHousing: data,
@@ -63,12 +62,6 @@
       return {
         currentHousing: null,
       }
-    },
-    mounted() {
-       console.log(this.currentHousing);
-       console.log(this.currentHousing.cityId);
-       console.log(this.currentHousing.users);
-       console.log(this.currentHousing.cities);
     },
     head() {
       return {
