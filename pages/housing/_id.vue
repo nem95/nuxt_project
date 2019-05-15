@@ -51,7 +51,7 @@
 
   export default {
     async asyncData({ params }) {
-      const { data } = await axios.get(`/housing/${params.id}?_expand=cities`);
+      const { data } = await axios.get(`/housings/${params.id}?_expand=cities`);
       console.log(data);
 
       return {
