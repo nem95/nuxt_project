@@ -81,7 +81,7 @@
 
         <div class="col-md-4">
           <div class="form-group">
-            <label for="price">Prix</label>
+            <label for="price">€/jour</label>
             <input
               id="price"
               v-model="price"
@@ -218,10 +218,7 @@
         });
       },
       onPicturesChange (item, e) {
-        console.log(e);
-
         this.picturesArray = this.pictures.split(',');
-        console.log(this.pictures.split(','));
       }
     },
   }

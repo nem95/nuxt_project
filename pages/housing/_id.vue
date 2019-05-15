@@ -1,11 +1,16 @@
 <template>
   <div v-if="currentHousing">
     <div class="row">
-      <div class="col-md-12 my-4">
+      <div class="col-md-6 my-4">
          <nuxt-link :to="{ name: 'housing'}">
-          <button type="button" class="btn btn-primary">Retour</button>
+          <button type="button" class="btn btn-primary float-left">Retour</button>
         </nuxt-link>
       </div>
+
+      <div class="col-md-6 my-4">
+        <button type="button" class="btn btn-danger float-right" @click="deleteHousing">Supprimer cette annonce</button>
+      </div>
+
     </div>
 
     <div class="row">
@@ -67,5 +72,17 @@
         title: "Article",
       }
     },
+    methods: {
+      deleteHousing: async function (e) {
+        console.log(this.currentHousing);
+
+        try {
+          await axios.delete(`housings/${this.currentHousing.id}`);
+          this.$router.push('/housing');
+        } catch (error) {
+          alert(error)
+        }
+      }
+    }
   }
 </script>
