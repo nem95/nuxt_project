@@ -121,6 +121,11 @@
       "id": 1,
       "name": "Admin",
       "password": "azerty"
+    },
+    {
+      "id": 2,
+      "name": "Admin",
+      "password": "azerty"
     }
   ]
 }

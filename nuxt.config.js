@@ -41,6 +41,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {src: '~/plugins/calendar', ssr: false}
     { src: '~/plugins/vue-carousel', ssr: false },
   ],
 
@@ -48,12 +49,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+  
   ],
 
   /*
   ** Build configuration
   */
   build: {
+    transpile: ['calendar'],
     transpile : ['vue-carousel'],
     /*
     ** You can extend webpack config here
