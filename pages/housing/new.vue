@@ -53,28 +53,28 @@
       <div class="row">
         <div class="col-md-4">
           <div class="form-group">
-            <label for="price">Prix</label>
+            <label for="surface">Superficie</label>
             <input
-              id="price"
-              v-model="price"
-              type="price"
-              name="price"
+              id="surface"
+              v-model="surface"
+              type="surface"
+              name="surface"
               class="form-control"
-              placeholder="990"
+              placeholder="35"
             >
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="form-group">
-            <label for="price">Prix</label>
+            <label for="rooms">Nombre de piece</label>
             <input
-              id="price"
-              v-model="price"
-              type="price"
-              name="price"
+              id="rooms"
+              v-model="rooms"
+              type="rooms"
+              name="rooms"
               class="form-control"
-              placeholder="990"
+              placeholder="3"
             >
           </div>
         </div>
@@ -167,7 +167,7 @@
         surface: null,
         rooms: null,
         pictures: null,
-        picturesArray: null,
+        picturesArray: [],
       }
     },
     head() {
@@ -175,14 +175,9 @@
         title: "Article",
       }
     },
-    updated() {
-
-    },
     methods: {
-      checkForm: function (e) {
-        if (this.title && this.description) {
-          return true;
-        }
+      checkForm: async function (e) {
+        e.preventDefault();
 
         this.errors = [];
 
@@ -192,8 +187,35 @@
         if (!this.description) {
           this.errors.push('Description obligatoire.');
         }
+        if (!this.price) {
+          this.errors.push('Prix obligatoire.');
+        }
+        if (!this.surface) {
+          this.errors.push('Superficie obligatoire.');
+        }
+        if (!this.rooms) {
+          this.errors.push('Nombre de piece obligatoire.');
+        }
+        if (this.picturesArray.lenght < 0) {
+          this.errors.push('Il faut au moins une image');
+          return null
+        }
+        if(!this.rooms || !this.surface || !this.price || !this.description || !this.title) {
+          console.log('error');
 
-        e.preventDefault();
+          return null;
+        }
+
+        await axios.post('/housings', {
+          title: this.title,
+          description: this.description,
+          description: this.description,
+          citiesId: this.selectedCity.id,
+          price: this.price,
+          surface: this.surface,
+          rooms: this.rooms,
+          pictures: this.picturesArray,
+        });
       },
       onPicturesChange (item, e) {
         console.log(e);
