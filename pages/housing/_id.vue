@@ -67,6 +67,7 @@
   
   export default {
     async asyncData({ params }) {
+      
       const { data } = await axios.get(`/housings/${params.id}?_expand=cities&_embed=bookings`);
       
       let alreadyBookedDate = [];
@@ -126,6 +127,19 @@
             "startDate": new Date(this.calendarData.dateRange.start).getTime(),
             "endDate": new Date(this.calendarData.dateRange.end).getTime()
           });
+          
+          let currentStartDate = new Date(this.calendarData.dateRange.start),
+            startTimestamp = currentStartDate.getTime(),
+            endTimestamp = new Date(this.calendarData.dateRange.end);
+  
+          while (endTimestamp > startTimestamp) {
+            this.calendarConfigs.disabledDates.push(`${currentStartDate.getMonth()+1}/${currentStartDate.getDate()}/${currentStartDate.getFullYear()}`);
+            currentStartDate.setDate(currentStartDate.getDate() + 1);
+            startTimestamp += 1000 * 60 * 60 * 24;
+  
+            this.calendarData.dateRange.end = false;
+            this.calendarData.dateRange.start = false;
+          }
         }
       }
     },

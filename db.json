@@ -103,49 +103,22 @@
   ],
   "bookings": [
     {
-      "id": 1,
-      "housingId": 1,
-      "usersId": 1,
-      "clientsId": 1,
-      "price": 930,
-      "startDate": 1557007200000,
-      "endDate": 1557871200000
-    },
-    {
-      "housingId": 1,
-      "usersId": 1,
-      "clientsId": 1,
-      "price": 930,
-      "startDate": 1560981600000,
-      "endDate": 1557957600000,
-      "id": 2
-    },
-    {
       "housingId": 1,
       "usersId": 1,
       "clientsId": 1,
       "price": 6999.93,
       "startDate": 1557957600000,
       "endDate": 1558562400000,
-      "id": 3
-    },
-    {
-      "housingId": 1,
-      "usersId": 1,
-      "clientsId": 1,
-      "price": 6999.93,
-      "startDate": 1559858400000,
-      "endDate": 1560463200000,
-      "id": 4
+      "id": 1
     },
     {
       "housingId": 1,
       "usersId": 1,
       "clientsId": 1,
       "price": 5999.9400000000005,
-      "startDate": 1561154400000,
-      "endDate": 1561672800000,
-      "id": 5
+      "startDate": 1558648800000,
+      "endDate": 1559167200000,
+      "id": 2
     }
   ],
   "housings": [
@@ -181,6 +154,11 @@
   "users": [
     {
       "id": 1,
+      "name": "Admin",
+      "password": "azerty"
+    },
+    {
+      "id": 2,
       "name": "Admin",
       "password": "azerty"
     }
