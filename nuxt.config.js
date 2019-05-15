@@ -34,12 +34,14 @@ export default {
   ** Global CSS
   */
   css: [
+    'swiper/dist/css/swiper.css',
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-carousel', ssr: false },
   ],
 
   /*
@@ -52,6 +54,7 @@ export default {
   ** Build configuration
   */
   build: {
+    transpile : ['vue-carousel'],
     /*
     ** You can extend webpack config here
     */
