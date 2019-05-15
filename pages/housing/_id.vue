@@ -55,7 +55,6 @@
 
       return {
         currentHousing: data,
-        activeSlide: 0,
       }
     },
     data() {
