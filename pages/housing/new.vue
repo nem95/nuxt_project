@@ -179,6 +179,8 @@
       checkForm: async function (e) {
         e.preventDefault();
 
+        console.log("ici");
+        
         this.errors = [];
 
         if (!this.title) {
@@ -209,7 +211,7 @@
         await axios.post('/housings', {
           title: this.title,
           description: this.description,
-          description: this.description,
+          postedDate: new Date().getTime(),
           citiesId: this.selectedCity.id,
           price: this.price,
           surface: this.surface,

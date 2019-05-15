@@ -16,7 +16,11 @@
             Liste des appartements
           </nuxt-link>
         </li>
-
+        <li class="nav-item active">
+          <nuxt-link :to="{ name: 'booking'}" class="nav-link">
+            Liste des réservations
+          </nuxt-link>
+        </li>
         <li class="nav-item active">
           <nuxt-link to="/housing/new" class="nav-link">
             Créer une annonce

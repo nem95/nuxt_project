@@ -126,9 +126,9 @@
         if (this.calendarData.dateRange.end && this.calendarData.dateRange.start) {
           axios.post(`/bookings`, {
             "housingId": this.currentHousing.id,
-            "usersId": 1,
-            "clientsId": 1,
-            "price": this.currentHousing.price * Math.floor(( new Date(this.calendarData.dateRange.end).getTime() - new Date(this.calendarData.dateRange.start).getTime() ) / 86400000),
+            "userId": 1,
+            "clientId": 2,
+            "price": Math.floor(this.currentHousing.price * ( new Date(this.calendarData.dateRange.end).getTime() - new Date(this.calendarData.dateRange.start).getTime() ) / 86400000),
             "startDate": new Date(this.calendarData.dateRange.start).getTime(),
             "endDate": new Date(this.calendarData.dateRange.end).getTime()
           });
@@ -146,17 +146,8 @@
             this.calendarData.dateRange.start = false;
           }
         }
-      }
-    },
-    head() {
-      return {
-        title: "Article",
-      }
-    },
-    methods: {
+      },
       deleteHousing: async function (e) {
-        console.log(this.currentHousing);
-
         try {
           await axios.delete(`housings/${this.currentHousing.id}`);
           this.$router.push('/housing');
@@ -164,6 +155,11 @@
           alert(error)
         }
       }
-    }
+    },
+    head() {
+      return {
+        title: "Article",
+      }
+    },
   }
 </script>

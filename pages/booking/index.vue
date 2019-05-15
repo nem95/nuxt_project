@@ -1,33 +1,36 @@
 <template>
-  <div class="container">
-    <div class="row mb-12">
-      <h1>{{ title }}</h1>
+  <div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{ title }}</h1>
+      </div>
     </div>
     
     <div class="row mb-12">
-      <div v-for="booking in bookings" :key="booking.id" class="col-md-12">
+      <div v-for="(booking, index) in user.bookings" :key="booking.id" class="col-md-12">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-primary">{{ booking.price }}</strong>
             <h3 class="mb-0  text-dark">
-              {{ booking.housing.title }}
+              {{ booking.housingId }}
             </h3>
             <div class="mb-1 text-muted">
-              Du: {{ booking.housing.startDate }}
+              Du: {{ booking.startDate }}
             </div>
             <div class="mb-1 text-muted">
-              Au: {{ booking.housing.endDate }}
+              Au: {{ booking.endDate }}
             </div>
-            <p class="card-text mb-auto">
-              {{ housing.description.substring(0, 80) }}
-            </p>
           </div>
-          <img class="card-img-right flex-auto d-none d-md-block"
-               data-src="holder.js/200x250?theme=thumb"
-               alt="Thumbnail [200x250]"
-               style="width: 200px; height: 250px;"
-               data-holder-rendered="true"
-               :src="`${booking.housing.pictures.length  > 0 ? booking.housing.pictures[0] : 'https://www.goafricaonline.com/uploads/media/cms_post/0001/01/cms_post_cover/398_564f28c66a053-immobilier-afrique.jpg'}`">
+          <div class="row mb6">
+            <button
+              class="btn btn-primary btn-lg"
+              :value="`${index}`"
+              :data-id="`${booking.id}`"
+              role="button"
+              v-on:click="cancel"
+            >Annuler
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -40,21 +43,30 @@
   
   export default {
     asyncData: async function () {
-      const { data } = await axios.get(`/users/?_embed=booking`);
       
-      data.forEach(function (book) {
+      const { data } = await axios.get(`/users/1?_embed=bookings`);
+      
+      data.bookings.forEach(function (book) {
         book.startDate = (book.hasOwnProperty("startDate")) ? moment(book.startDate).locale("fr").format('Do/MM/YYYY') : "Date inconnue";
         book.endDate = (book.hasOwnProperty("endDate")) ? moment(book.endDate).locale("fr").format('Do/MM/YYYY') : "Date inconnue";
       });
       
       return {
-        housings: data
+        user: data
       };
+    },
+    methods: {
+      cancel: function (event) {
+        this.user.bookings.splice(event.srcElement.value, 1);
+        axios.delete(`/bookings/${event.srcElement.dataset.id}`);
+      }
     },
     data() {
       return {
         title: "Mes réservatons",
-        housings: []
+        user: {
+          bookings: []
+        }
       }
     }
   }

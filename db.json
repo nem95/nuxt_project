@@ -101,19 +101,217 @@
       "zipCode": "75020"
     }
   ],
+  "bookings": [
+    {
+      "housingId": 1,
+      "userId": 1,
+      "clientId": 2,
+      "price": 6000,
+      "startDate": 1558735200000,
+      "endDate": 1559253600000,
+      "id": 1
+    }
+  ],
   "housings": [
     {
-      "title": "appartement 70m2 Paris 2",
-      "description": "appartement 70m2 Paris 2",
-      "citiesId": 2,
-      "price": "350",
-      "surface": "70",
-      "rooms": "3",
+      "title": "Mon annonce",
+      "description": "Ma desciption",
+      "citiesId": 1,
+      "postedDate": 1557942614212,
+      "price": "1000",
+      "surface": "34",
+      "rooms": "1",
       "pictures": [
-        "https://images.fnaim.fr/images1/img65/500265004049E0VKUBT01.jpg",
-        "https://flathunter.fr/img/Fotolia_105160816_M.jpg"
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
       ],
       "id": 1
+    },
+    {
+      "title": "ZRGER",
+      "description": "g",
+      "postedDate": 1557943435044,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [],
+      "id": 2
+    },
+    {
+      "title": "ZRGER",
+      "description": "g",
+      "postedDate": 1557943436894,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [],
+      "id": 3
+    },
+    {
+      "title": "ZRGER",
+      "description": "gr",
+      "postedDate": 1557943445864,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [],
+      "id": 4
+    },
+    {
+      "title": "ZRGER",
+      "description": "gr",
+      "postedDate": 1557943446587,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [],
+      "id": 5
+    },
+    {
+      "title": "ZRGER",
+      "description": "gr",
+      "postedDate": 1557943459916,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 6
+    },
+    {
+      "title": "ZRGER",
+      "description": "gr",
+      "postedDate": 1557943461397,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 7
+    },
+    {
+      "title": "ZRGER",
+      "description": "gr",
+      "postedDate": 1557943461926,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 8
+    },
+    {
+      "title": "ZRGER",
+      "description": "gr",
+      "postedDate": 1557943462200,
+      "citiesId": 1,
+      "price": "2",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 9
+    },
+    {
+      "title": "ZRGER",
+      "description": "grzr",
+      "postedDate": 1557943471960,
+      "citiesId": 7,
+      "price": "500",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 10
+    },
+    {
+      "title": "ZRGER",
+      "description": "grzr",
+      "postedDate": 1557943472724,
+      "citiesId": 7,
+      "price": "500",
+      "surface": "32",
+      "rooms": "42",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 11
+    },
+    {
+      "title": "s",
+      "description": "ef",
+      "postedDate": 1557943486327,
+      "citiesId": 1,
+      "price": "500",
+      "surface": "30",
+      "rooms": "2",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 12
+    },
+    {
+      "title": "s",
+      "description": "ef",
+      "postedDate": 1557943487109,
+      "citiesId": 1,
+      "price": "500",
+      "surface": "30",
+      "rooms": "2",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 13
+    },
+    {
+      "title": "s",
+      "description": "ef",
+      "postedDate": 1557943487485,
+      "citiesId": 1,
+      "price": "500",
+      "surface": "30",
+      "rooms": "2",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 14
+    },
+    {
+      "title": "s",
+      "description": "ef",
+      "postedDate": 1557943487654,
+      "citiesId": 1,
+      "price": "500",
+      "surface": "30",
+      "rooms": "2",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 15
+    },
+    {
+      "title": "d",
+      "description": "qs",
+      "postedDate": 1557943518740,
+      "citiesId": 1,
+      "price": "4",
+      "surface": "43",
+      "rooms": "3",
+      "pictures": [
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      ],
+      "id": 16
     }
   ],
   "users": [

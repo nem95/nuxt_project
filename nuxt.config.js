@@ -41,8 +41,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~/plugins/calendar', ssr: false}
-    { src: '~/plugins/vue-carousel', ssr: false },
+    {src: '~/plugins/calendar', ssr: false},
+    { src: '~/plugins/vue-carousel', ssr: false }
   ],
 
   /*
@@ -56,8 +56,7 @@ export default {
   ** Build configuration
   */
   build: {
-    transpile: ['calendar'],
-    transpile : ['vue-carousel'],
+    transpile: ['calendar', 'vue-carousel'],
     /*
     ** You can extend webpack config here
     */
